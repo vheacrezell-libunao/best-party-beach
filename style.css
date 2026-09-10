@@ -1,0 +1,369 @@
+/* =====================================================
+   1. VARIABLES
+   ===================================================== */
+
+:root {
+    --brand-color: #0ea5a8;
+    --dark-ink: #12343b;
+    --muted-grey: #64748b;
+    --light-background: #f0fbfa;
+
+    --white: #ffffff;
+    --sunset: #ff9f68;
+    --ocean-deep: #075985;
+    --border-color: #d7eeee;
+    --shadow: 0 12px 30px rgba(18, 52, 59, 0.12);
+}
+
+
+/* =====================================================
+   2. BASE STYLES
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-ink);
+    background-color: var(--light-background);
+}
+
+
+/* =====================================================
+   3. LAYOUT REGIONS
+   ===================================================== */
+
+/* Header */
+
+header {
+    background: linear-gradient(
+        135deg,
+        var(--ocean-deep),
+        var(--brand-color)
+    );
+
+    color: var(--white);
+    text-align: center;
+    padding: 55px 20px;
+
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 12px auto 0;
+    max-width: 700px;
+    font-size: 1.1rem;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: var(--white);
+    text-align: center;
+    padding: 15px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 4px 15px rgba(18, 52, 59, 0.08);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 5px 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-ink);
+    font-weight: 600;
+
+    padding: 9px 16px;
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--brand-color);
+    color: var(--white);
+}
+
+
+/* Main */
+
+main {
+    width: min(1100px, 92%);
+    margin: 45px auto;
+}
+
+main > section {
+    background-color: var(--white);
+
+    padding: 35px;
+    margin-bottom: 40px;
+
+    border-radius: 25px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--dark-ink);
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =====================================================
+   4. COMPONENTS — PLACE CARDS
+   ===================================================== */
+
+article {
+    background-color: var(--white);
+
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+
+    padding: 25px;
+    margin: 30px 0;
+
+    box-shadow: 0 8px 25px rgba(18, 52, 59, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 35px rgba(18, 52, 59, 0.15);
+}
+
+article h3 {
+    color: var(--ocean-deep);
+
+    font-size: 1.7rem;
+
+    margin-bottom: 5px;
+
+    letter-spacing: 1px;
+}
+
+article p {
+    color: var(--muted-grey);
+}
+
+
+/* =====================================================
+   IMAGES
+   ===================================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+
+    border-radius: 18px;
+
+    margin: 18px 0;
+}
+
+article > img {
+    width: 300px;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   DETAILS / VIEW DETAILS
+   ===================================================== */
+
+details {
+    margin-top: 20px;
+
+    background-color: #f7ffff;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 18px;
+
+    padding: 15px 20px;
+}
+
+summary {
+    cursor: pointer;
+
+    color: var(--brand-color);
+
+    font-weight: bold;
+
+    font-size: 1.05rem;
+}
+
+summary:hover {
+    color: var(--ocean-deep);
+}
+
+details img {
+    width: 600px;
+    max-height: 400px;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   TABLES
+   ===================================================== */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    background-color: var(--white);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 13px 15px;
+
+    text-align: left;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--brand-color);
+
+    color: var(--white);
+
+    width: 35%;
+}
+
+td {
+    color: var(--muted-grey);
+}
+
+
+/* =====================================================
+   EXTRA DESIGN
+   ===================================================== */
+
+hr {
+    width: 70px;
+
+    border: 0;
+
+    border-top: 4px solid var(--sunset);
+
+    margin: 20px auto;
+}
+
+h2 {
+    color: var(--ocean-deep);
+
+    font-size: 2rem;
+}
+
+section > h2 {
+    text-align: center;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 40px 15px;
+    }
+
+    nav li {
+        display: block;
+
+        margin: 8px 0;
+    }
+
+    main {
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+    main > section {
+        padding: 20px;
+    }
+
+    article {
+        padding: 18px;
+    }
+
+    article > img {
+        width: 100%;
+        height: auto;
+    }
+
+    details img {
+        width: 100%;
+    }
+
+    th,
+    td {
+        display: block;
+
+        width: 100%;
+    }
+}
