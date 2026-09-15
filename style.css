@@ -5,7 +5,7 @@
 :root {
     --brand-color: #0ea5a8;
     --dark-ink: #12343b;
-    --muted-grey: #475569;
+    --muted-grey: #64748b;
     --light-background: #f0fbfa;
 
     --white: #ffffff;
@@ -69,6 +69,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
 }
 
@@ -130,9 +131,9 @@ section h2 {
     width: 100%;
     max-width: 800px;
     height: auto;
-    border-radius: 15px;
     display: block;
     margin: 20px auto;
+    border-radius: 12px;
 }
 
 
@@ -141,38 +142,49 @@ section h2 {
    ============================== */
 
 .place-card {
-    background: var(--light-background);
+    background: var(--white);
     border-radius: 15px;
     padding: 25px;
     border-left: 6px solid var(--brand-color);
     margin-bottom: 25px;
     box-shadow: var(--shadow);
+
+    /* ALIGNMENT */
+    text-align: left;
 }
+
+
+/* PLACE NAME */
 
 .place-card h3 {
     color: var(--ocean-deep);
     font-size: 1.6rem;
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
+    text-align: left;
 }
+
+
+/* PLACE TEXT */
 
 .place-card p {
     color: var(--dark-ink);
+    margin: 8px 0;
 }
+
+
+/* PLACE IMAGE */
 
 .place-card img {
     width: 100%;
     max-width: 700px;
     height: auto;
     display: block;
-    margin: 15px auto;
+    margin: 20px auto;
     border-radius: 12px;
 }
 
 
-/* ==============================
-   VIEW DETAILS BUTTON
-   ============================== */
+/* VIEW DETAILS BUTTON */
 
 .view-details {
     display: inline-block;
@@ -224,10 +236,12 @@ section h2 {
 
 #contact h2 {
     margin-top: 0;
+    text-align: center;
 }
 
-#contact p {
-    margin-bottom: 10px;
+#contact > p {
+    max-width: 800px;
+    margin: 10px auto;
 }
 
 
@@ -235,26 +249,36 @@ section h2 {
    CONTACT FORM
    ============================== */
 
-form {
+#contact form {
     max-width: 700px;
     margin: 25px auto;
 }
 
-fieldset {
+
+/* FIELDSET */
+
+#contact fieldset {
     border: 2px solid var(--border-color);
     border-radius: 15px;
     padding: 25px;
+    margin: 0;
     background: var(--light-background);
 }
 
-legend {
+
+/* LEGEND */
+
+#contact legend {
     color: var(--brand-color);
     font-size: 1.3rem;
     font-weight: bold;
     padding: 0 10px;
 }
 
-label {
+
+/* LABELS */
+
+#contact label {
     display: block;
     margin-top: 15px;
     margin-bottom: 6px;
@@ -262,8 +286,12 @@ label {
     color: var(--dark-ink);
 }
 
-input,
-textarea {
+
+/* INPUTS AND TEXTAREA */
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
     width: 100%;
     padding: 12px;
     border: 2px solid var(--border-color);
@@ -272,29 +300,31 @@ textarea {
     font-size: 1rem;
     color: var(--dark-ink);
     background: var(--white);
+    display: block;
 }
 
-textarea {
+
+/* TEXTAREA */
+
+#contact textarea {
     resize: vertical;
+    min-height: 120px;
 }
 
 
-/* ==============================
-   FOCUS STATE
-   ============================== */
+/* FOCUS STATE */
 
-input:focus,
-textarea:focus {
+#contact input:focus,
+#contact textarea:focus {
     outline: 3px solid var(--brand-color);
     outline-offset: 2px;
 }
 
 
-/* ==============================
-   SUBMIT BUTTON
-   ============================== */
+/* SUBMIT BUTTON */
 
-button {
+#contact button {
+    display: block;
     background: var(--brand-color);
     color: var(--white);
     padding: 12px 22px;
@@ -303,14 +333,20 @@ button {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 20px auto 5px;
 }
 
-button:hover {
+
+/* BUTTON HOVER */
+
+#contact button:hover {
     background: var(--ocean-deep);
 }
 
-button:focus {
+
+/* BUTTON FOCUS */
+
+#contact button:focus {
     outline: 3px solid var(--brand-color);
     outline-offset: 2px;
 }
@@ -426,10 +462,18 @@ footer p {
         padding: 20px;
     }
 
+    .place-card h3 {
+        font-size: 1.4rem;
+    }
+
     #home,
     #about,
     #contact,
     .place-detail {
+        padding: 20px;
+    }
+
+    #contact fieldset {
         padding: 20px;
     }
 

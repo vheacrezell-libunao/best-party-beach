@@ -12,17 +12,26 @@
 
 <body>
 
+    <!-- HEADER -->
     <header>
-        <h1>Palawan</h1>
+
+        <h1>Summer Beats by the Sea</h1>
+
+        <hr>
 
         <p>
-            Summer Beats by the Sea
+            Your summer adventure starts here —
+            come have fun and make great memories!
         </p>
+
     </header>
 
 
+    <!-- NAVIGATION -->
     <nav>
+
         <ul>
+
             <li>
                 <a href="../index.html#home">Home</a>
             </li>
@@ -34,73 +43,240 @@
             <li>
                 <a href="../index.html#contact">Contact</a>
             </li>
+
         </ul>
+
     </nav>
 
 
+    <!-- MAIN CONTENT -->
     <main>
 
-        <article class="detail-page">
+        <!-- PALAWAN DETAILS -->
 
-            <h2>Palawan</h2>
+        <section class="place-detail">
+
+            <h1>PALAWAN</h1>
+
+            <p>
+                Puerto Princesa, Palawan
+            </p>
 
             <img
                 src="../palawan.jpg"
-                alt="Palawan beach with clear blue water"
+                alt="Beautiful beach in Palawan"
             >
 
             <p>
-                Palawan is famous for its beautiful beaches with
-                clear blue water, white sand, and amazing natural
-                scenery. I recommend this place because it is
-                peaceful and gives visitors a chance to enjoy nature
-                and make memorable experiences.
+                Palawan is one of the most beautiful places in
+                the Philippines. It is known for its clear blue
+                water, beautiful beaches, limestone cliffs, and
+                rich natural environment.
             </p>
+
+            <p>
+                Visitors can enjoy swimming, island hopping,
+                sightseeing, and exploring nature. Palawan is
+                also a great place to relax and spend time with
+                family and friends.
+            </p>
+
+
+            <!-- PLACE INFORMATION -->
+
+            <h2>Place Information</h2>
 
             <table>
 
                 <tr>
-                    <th>Address</th>
-                    <td>
-                        Puerto Princesa, Palawan, Philippines
-                    </td>
+                    <th>Location</th>
+                    <td>Puerto Princesa, Palawan</td>
                 </tr>
 
                 <tr>
-                    <th>Opening Hours</th>
-                    <td>
-                        Open daily
-                    </td>
+                    <th>Type</th>
+                    <td>Beach and Nature</td>
                 </tr>
 
                 <tr>
-                    <th>Price Range</th>
-                    <td>
-                        ₱5,000
-                    </td>
+                    <th>Best For</th>
+                    <td>Relaxing, Swimming, and Exploring</td>
                 </tr>
 
                 <tr>
-                    <th>Best Time to Visit</th>
-                    <td>
-                        Morning or late afternoon
-                    </td>
+                    <th>Activities</th>
+                    <td>Island Hopping, Swimming, and Sightseeing</td>
                 </tr>
 
             </table>
 
-            <br>
 
-            <a class="details-button" href="../index.html#home">
-                Back to Home
+            <a
+                href="../index.html"
+                class="back-button"
+            >
+                ← Back to Home
             </a>
 
-        </article>
+        </section>
+
+
+        <!-- SUGGEST-A-PLACE FORM -->
+
+        <section id="suggest-place">
+
+            <h2>Suggest a Place</h2>
+
+            <p>
+                Do you know a great place that should be added
+                to this guide? Recommend it below!
+            </p>
+
+
+            <form>
+
+                <!-- PLACE NAME -->
+
+                <label for="place-name">
+                    Place Name:
+                </label>
+
+                <input
+                    type="text"
+                    id="place-name"
+                    name="place-name"
+                    placeholder="Enter the place name"
+                    required
+                >
+
+
+                <!-- CATEGORY RADIO BUTTONS -->
+
+                <fieldset>
+
+                    <legend>
+                        What is the category?
+                    </legend>
+
+
+                    <input
+                        type="radio"
+                        id="food"
+                        name="category"
+                        value="food"
+                        required
+                    >
+
+                    <label for="food">
+                        Food
+                    </label>
+
+
+                    <input
+                        type="radio"
+                        id="study-spot"
+                        name="category"
+                        value="study-spot"
+                    >
+
+                    <label for="study-spot">
+                        Study Spot
+                    </label>
+
+
+                    <input
+                        type="radio"
+                        id="outdoors"
+                        name="category"
+                        value="outdoors"
+                    >
+
+                    <label for="outdoors">
+                        Outdoors
+                    </label>
+
+                </fieldset>
+
+
+                <!-- GOOD POINTS CHECKBOXES -->
+
+                <fieldset>
+
+                    <legend>
+                        What's good about it?
+                    </legend>
+
+
+                    <input
+                        type="checkbox"
+                        id="affordable"
+                        name="good-points"
+                        value="affordable"
+                    >
+
+                    <label for="affordable">
+                        Affordable
+                    </label>
+
+
+                    <input
+                        type="checkbox"
+                        id="good-wifi"
+                        name="good-points"
+                        value="good-wifi"
+                    >
+
+                    <label for="good-wifi">
+                        Good Wi-Fi
+                    </label>
+
+
+                    <input
+                        type="checkbox"
+                        id="quiet"
+                        name="good-points"
+                        value="quiet"
+                    >
+
+                    <label for="quiet">
+                        Quiet
+                    </label>
+
+                </fieldset>
+
+
+                <!-- EMAIL -->
+
+                <label for="contact-email">
+                    Contact Email:
+                </label>
+
+                <input
+                    type="email"
+                    id="contact-email"
+                    name="contact-email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <!-- SUBMIT -->
+
+                <button type="submit">
+                    Submit Suggestion
+                </button>
+
+            </form>
+
+        </section>
 
     </main>
 
 
+    <!-- FOOTER -->
+
     <footer>
+
         <p>
             🌊 Summer Beats by the Sea
         </p>
@@ -108,6 +284,7 @@
         <p>
             Explore • Relax • Make Memories
         </p>
+
     </footer>
 
 </body>
