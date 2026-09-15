@@ -1,6 +1,6 @@
-/* =====================================================
-   1. VARIABLES
-   ===================================================== */
+/* ==============================
+   BASIC SETTINGS
+   ============================== */
 
 :root {
     --brand-color: #0ea5a8;
@@ -9,23 +9,14 @@
     --light-background: #f0fbfa;
 
     --white: #ffffff;
-    --sunset: #ff9f68;
+    --sunset: #ff9a76;
     --ocean-deep: #075985;
-    --border-color: #d7eeee;
-    --shadow: 0 12px 30px rgba(18, 52, 59, 0.12);
+    --border-color: #d1e5e7;
+    --shadow: 0 8px 20px rgba(18, 52, 59, 0.12);
 }
-
-
-/* =====================================================
-   2. BASE STYLES
-   ===================================================== */
 
 * {
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -33,117 +24,262 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
     line-height: 1.6;
     color: var(--dark-ink);
-    background-color: var(--light-background);
+
+    /* SKY BLUE BACKGROUND */
+    background-color: #87CEEB;
 }
 
 
-/* =====================================================
-   3. LAYOUT REGIONS
-   ===================================================== */
-
-/* Header */
+/* ==============================
+   HEADER
+   ============================== */
 
 header {
-    background: linear-gradient(
-        135deg,
-        var(--ocean-deep),
-        var(--brand-color)
-    );
-
+    background: var(--ocean-deep);
     color: var(--white);
+    padding: 30px 20px;
     text-align: center;
-    padding: 55px 20px;
-
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-
-    box-shadow: var(--shadow);
 }
 
 header h1 {
     margin: 0;
-    font-size: clamp(2rem, 5vw, 4rem);
-    letter-spacing: 2px;
+    font-size: 2.5rem;
 }
 
 header p {
-    margin: 12px auto 0;
-    max-width: 700px;
+    margin: 8px 0 0;
     font-size: 1.1rem;
 }
 
 
-/* Navigation */
+/* ==============================
+   NAVIGATION
+   ============================== */
 
 nav {
-    background-color: var(--white);
-    text-align: center;
-    padding: 15px;
-
+    background: var(--white);
+    padding: 12px 20px;
+    box-shadow: var(--shadow);
     position: sticky;
     top: 0;
     z-index: 100;
-
-    box-shadow: 0 4px 15px rgba(18, 52, 59, 0.08);
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin: 5px 8px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 nav a {
     text-decoration: none;
     color: var(--dark-ink);
-    font-weight: 600;
-
-    padding: 9px 16px;
-    border-radius: 20px;
-
-    transition: 0.3s ease;
+    font-weight: bold;
 }
 
 nav a:hover {
-    background-color: var(--brand-color);
-    color: var(--white);
+    color: var(--brand-color);
 }
 
 
-/* Main */
+/* ==============================
+   MAIN CONTENT
+   ============================== */
 
 main {
-    width: min(1100px, 92%);
-    margin: 45px auto;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-main > section {
-    background-color: var(--white);
-
-    padding: 35px;
+section {
     margin-bottom: 40px;
+}
 
-    border-radius: 25px;
+section h2 {
+    color: var(--ocean-deep);
+    text-align: center;
+    margin-bottom: 25px;
+}
 
+
+/* ==============================
+   HOME / HERO
+   ============================== */
+
+#home {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 25px;
+    border-radius: 15px;
     box-shadow: var(--shadow);
 }
 
+#home h2 {
+    margin-top: 0;
+    color: var(--ocean-deep);
+}
 
-/* Footer */
+#home p {
+    max-width: 750px;
+    margin: 10px auto;
+}
+
+
+/* ==============================
+   PLACE CARDS
+   ============================== */
+
+article {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 25px;
+    border-left: 6px solid var(--brand-color);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+
+article h3 {
+    color: var(--ocean-deep);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+article p {
+    color: var(--dark-ink);
+}
+
+article img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+}
+
+
+/* ==============================
+   VIEW DETAILS BUTTON
+   ============================== */
+
+.view-details {
+    display: inline-block;
+    background: var(--brand-color);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.view-details:hover {
+    background: var(--ocean-deep);
+}
+
+
+/* ==============================
+   DETAILS
+   ============================== */
+
+details {
+    margin-top: 15px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--brand-color);
+}
+
+summary:hover {
+    color: var(--ocean-deep);
+}
+
+
+/* ==============================
+   TABLE
+   ============================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--white);
+}
+
+th,
+td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: var(--ocean-deep);
+    color: var(--white);
+}
+
+td {
+    background: var(--white);
+}
+
+
+/* ==============================
+   ABOUT SECTION
+   ============================== */
+
+#about {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+#about h2 {
+    margin-top: 0;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+
+/* ==============================
+   CONTACT SECTION
+   ============================== */
+
+#contact {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+#contact h2 {
+    margin-top: 0;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
 
 footer {
-    background-color: var(--dark-ink);
+    background: var(--ocean-deep);
     color: var(--white);
-
     text-align: center;
-
-    padding: 30px 20px;
-    margin-top: 50px;
+    padding: 25px 20px;
+    margin-top: 40px;
 }
 
 footer p {
@@ -151,219 +287,80 @@ footer p {
 }
 
 
-/* =====================================================
-   4. COMPONENTS — PLACE CARDS
-   ===================================================== */
+/* ==============================
+   PLACE DETAIL PAGE
+   ============================== */
 
-article {
-    background-color: var(--white);
-
-    border: 1px solid var(--border-color);
-    border-radius: 25px;
-
-    padding: 25px;
-    margin: 30px 0;
-
-    box-shadow: 0 8px 25px rgba(18, 52, 59, 0.08);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+.place-detail {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
 }
 
-article:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-        0 18px 35px rgba(18, 52, 59, 0.15);
-}
-
-article h3 {
+.place-detail h1 {
     color: var(--ocean-deep);
-
-    font-size: 1.7rem;
-
-    margin-bottom: 5px;
-
-    letter-spacing: 1px;
-}
-
-article p {
-    color: var(--muted-grey);
-}
-
-
-/* =====================================================
-   IMAGES
-   ===================================================== */
-
-img {
-    max-width: 100%;
-    height: auto;
-
-    display: block;
-
-    border-radius: 18px;
-
-    margin: 18px 0;
-}
-
-article > img {
-    width: 300px;
-    height: 200px;
-
-    object-fit: cover;
-}
-
-
-/* =====================================================
-   DETAILS / VIEW DETAILS
-   ===================================================== */
-
-details {
-    margin-top: 20px;
-
-    background-color: #f7ffff;
-
-    border: 1px solid var(--border-color);
-
-    border-radius: 18px;
-
-    padding: 15px 20px;
-}
-
-summary {
-    cursor: pointer;
-
-    color: var(--brand-color);
-
-    font-weight: bold;
-
-    font-size: 1.05rem;
-}
-
-summary:hover {
-    color: var(--ocean-deep);
-}
-
-details img {
-    width: 600px;
-    max-height: 400px;
-
-    object-fit: cover;
-}
-
-
-/* =====================================================
-   TABLES
-   ===================================================== */
-
-table {
-    width: 100%;
-
-    border-collapse: collapse;
-
-    margin-top: 20px;
-
-    background-color: var(--white);
-
-    border: 1px solid var(--border-color);
-
-    border-radius: 12px;
-
-    overflow: hidden;
-}
-
-th,
-td {
-    padding: 13px 15px;
-
-    text-align: left;
-
-    border-bottom: 1px solid var(--border-color);
-}
-
-th {
-    background-color: var(--brand-color);
-
-    color: var(--white);
-
-    width: 35%;
-}
-
-td {
-    color: var(--muted-grey);
-}
-
-
-/* =====================================================
-   EXTRA DESIGN
-   ===================================================== */
-
-hr {
-    width: 70px;
-
-    border: 0;
-
-    border-top: 4px solid var(--sunset);
-
-    margin: 20px auto;
-}
-
-h2 {
-    color: var(--ocean-deep);
-
-    font-size: 2rem;
-}
-
-section > h2 {
     text-align: center;
 }
 
+.place-detail img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+}
 
-/* =====================================================
+.back-button {
+    display: inline-block;
+    background: var(--brand-color);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background: var(--ocean-deep);
+}
+
+
+/* ==============================
    RESPONSIVE DESIGN
-   ===================================================== */
+   ============================== */
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
-    header {
-        padding: 40px 15px;
+    header h1 {
+        font-size: 2rem;
     }
 
-    nav li {
-        display: block;
-
-        margin: 8px 0;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     main {
-        width: 94%;
-
         margin: 25px auto;
-    }
-
-    main > section {
-        padding: 20px;
+        padding: 0 15px;
     }
 
     article {
-        padding: 18px;
+        padding: 20px;
     }
 
-    article > img {
-        width: 100%;
-        height: auto;
+    #home,
+    #about,
+    #contact,
+    .place-detail {
+        padding: 20px;
     }
 
-    details img {
-        width: 100%;
+    table {
+        font-size: 14px;
     }
 
-    th,
-    td {
-        display: block;
-
-        width: 100%;
-    }
 }
