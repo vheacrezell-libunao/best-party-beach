@@ -1,276 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Summer Beats by the Sea</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <!-- HEADER -->
-    <header>
-        <h1>Summer Beats by the Sea</h1>
-        <hr>
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Summer Beats by the Sea</h1>
+            <hr>
+            <p>Your summer adventure starts here —
+                come have fun and make great memories!
+            </p>
+        </div>
 
-        <p>
-            Your summer adventure starts here —
-            come have fun and make great memories!
-        </p>
+        <!-- NAVIGATION -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-
-    <!-- NAVIGATION -->
-    <nav>
-        <ul>
-            <li>
-                <a href="#home">Home</a>
-            </li>
-
-            <li>
-                <a href="#about">About</a>
-            </li>
-
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
-
-
-    <!-- MAIN CONTENT -->
+    <!-- HOME SECTION -->
     <main>
-
-        <!-- HOME -->
         <section id="home">
-
             <h2>Vhea Crezell Libunao</h2>
-
-            <p>
-                The Beach Where Summer Comes Alive
-            </p>
-
-            <img
-                src="dagat.avif"
-                alt="Beautiful beach with blue ocean"
-            >
-
+            <p>The Beach Where Summer Comes Alive</p>
+            <img src="dagat.avif" alt="Beautiful beach">
         </section>
-
 
         <!-- RECOMMENDED PLACES -->
-        <section>
-
+        <section id="places">
             <h2>My Top Picks</h2>
 
+            <div class="place-container">
+                <div class="place-card">
+                    <img src="palawan.jpg" alt="Palawan">
+                    <h3>Palawan</h3>
+                    <p>Enjoy the beautiful beaches and clear blue waters of Palawan.</p>
+                    <a href="places/palawan.html">View Details</a>
+                </div>
 
-            <!-- PALAWAN -->
-            <article class="place-card">
+                <div class="place-card">
+                    <img src="intramuros.jpg" alt="Intramuros">
+                    <h3>Intramuros</h3>
+                    <p>Explore the history and culture of this famous place in Manila.</p>
+                    <a href="places/intramuros.html">View Details</a>
+                </div>
 
-                <h3>PALAWAN</h3>
-
-                <p>
-                    Puerto Princesa, Palawan
-                </p>
-
-                <p>
-                    Palawan is known for its beautiful beaches,
-                    clear blue water, limestone cliffs, and rich
-                    nature. I recommend Palawan because it is
-                    relaxing, beautiful, and perfect for exploring
-                    nature. It also gives visitors a chance to
-                    experience the natural beauty and culture of
-                    the Philippines.
-                </p>
-
-                <img
-                    src="palawan.jpg"
-                    alt="Beautiful beach in Palawan"
-                >
-
-                <a
-                    href="places/palawan.html"
-                    class="view-details"
-                >
-                    View Details
-                </a>
-
-            </article>
-
-
-            <!-- INTRAMUROS -->
-            <article class="place-card">
-
-                <h3>INTRAMUROS</h3>
-
-                <p>
-                    Manila, Philippines
-                </p>
-
-                <p>
-                    I recommend Intramuros because it is a historic
-                    place with beautiful old buildings, churches,
-                    and stone walls. It is a good place to learn
-                    about Philippine history, take pictures, and
-                    explore with family or friends.
-                </p>
-
-                <img
-                    src="intramuros.jpg"
-                    alt="Historic Intramuros in Manila"
-                >
-
-                <a
-                    href="places/intramuros.html"
-                    class="view-details"
-                >
-                    View Details
-                </a>
-
-            </article>
-
-
-            <!-- MANILA OCEAN PARK -->
-            <article class="place-card">
-
-                <h3>MANILA OCEAN PARK</h3>
-
-                <p>
-                    Manila, Philippines
-                </p>
-
-                <p>
-                    I recommend Manila Ocean Park because it is a
-                    fun and beautiful place with many things to see
-                    and do. It is a great place for families and
-                    friends to spend time together, see different
-                    marine animals, and enjoy fun activities.
-                </p>
-
-                <img
-                    src="Manila-Ocean.jpg"
-                    alt="Manila Ocean Park"
-                >
-
-                <a
-                    href="places/manila-ocean-park.html"
-                    class="view-details"
-                >
-                    View Details
-                </a>
-
-            </article>
-
+                <div class="place-card">
+                    <img src="manila-ocean-park.jpg" alt="Manila Ocean Park">
+                    <h3>Manila Ocean Park</h3>
+                    <p>Discover different sea creatures and enjoy exciting activities.</p>
+                    <a href="places/manila-ocean-park.html">View Details</a>
+                </div>
+            </div>
         </section>
 
-
-        <!-- ABOUT -->
+        <!-- ABOUT SECTION -->
         <section id="about">
-
             <h2>About</h2>
-
-            <p>
-                Summer Beats by the Sea is a simple travel guide
-                featuring some of my recommended places in the
-                Philippines.
-            </p>
-
-            <p>
-                This website was created to share beautiful places
-                where people can relax, explore, learn, and make
-                great memories with family and friends.
-            </p>
-
+            <p>Welcome to Summer Beats by the Sea! This website shares some of my favorite places to visit and enjoy during summer. Explore beautiful destinations, discover new experiences, and make wonderful memories.</p>
         </section>
 
-
-        <!-- CONTACT -->
+        <!-- CONTACT SECTION -->
         <section id="contact">
+            <h2>Contact Me</h2>
 
-            <h2>Contact</h2>
-
-            <p>
-                If you want to know more about the places featured
-                on this website, you can contact me.
-            </p>
-
-
-            <!-- CONTACT FORM -->
             <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-                <fieldset>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                    <legend>Contact Me</legend>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
 
-                    <label for="name">Name:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your name"
-                        required
-                    >
-
-
-                    <label for="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-
-
-                    <label for="message">Message:</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Write your message here..."
-                        required
-                    ></textarea>
-
-
-                    <button type="submit">
-                        Send Message
-                    </button>
-
-                </fieldset>
-
+                <button type="submit">Send Message</button>
             </form>
-
-
-            <p>
-                Email: summerbeatsbythesea@gmail.com
-            </p>
-
-            <p>
-                Location: Manila, Philippines
-            </p>
-
         </section>
-
     </main>
-
 
     <!-- FOOTER -->
     <footer>
-
-        <p>
-            🌊 Summer Beats by the Sea
-        </p>
-
-        <p>
-            Explore • Relax • Make Memories
-        </p>
-
+        <p>&copy; 2026 Summer Beats by the Sea. All Rights Reserved.</p>
     </footer>
 
 </body>
-
 </html>

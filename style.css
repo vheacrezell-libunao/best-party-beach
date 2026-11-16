@@ -482,3 +482,74 @@ footer p {
     }
 
 }
+
+
+/* ==============================
+   ACTIVITY 6.3
+   FLEXBOX HEADER
+   ============================== */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HEADER CONTENT */
+
+.header-content {
+    text-align: left;
+}
+
+/* NAVIGATION FLEXBOX */
+
+.site-header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+/* REMOVE INLINE-BLOCK */
+
+.site-header nav li {
+    display: block;
+    margin: 0;
+}
+
+/* ==============================
+   CENTRE THE HOME SECTION
+   ============================== */
+
+#home {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ==============================
+   RESPONSIVE HEADER
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-content {
+        text-align: center;
+    }
+
+    .site-header nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+}
